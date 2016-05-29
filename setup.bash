@@ -15,9 +15,9 @@ else
 fi
 
 # Install all the packages from the list, unless already present.
-packages=(vim matchbox-keyboard)
+packages=(vim)
 for package in "${packages[@]}"; do
-    if ! dpkg-query -l $package > /dev/null; then
+    if ! dpkg-query -l $package >/dev/null; then
         echo "Installing package $package"
         sudo apt-get -y install $package
     fi
@@ -38,4 +38,9 @@ if [ ! -f ~/.vimrc ]; then
 else
     echoerr ".vimrc file already exists"
 fi
+
+# Add scripts for increasing and decreasing brightness
+cp scripts/increase_brightness.bash ~/Desktop/
+cp scripts/decrease_brightness.bash ~/Desktop/
+
 echo "All done!"
