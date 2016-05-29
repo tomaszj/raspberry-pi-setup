@@ -15,7 +15,7 @@ else
 fi
 
 # Install all the packages from the list, unless already present.
-packages=(vim)
+packages=(vim matchbox-keyboard)
 for package in "${packages[@]}"; do
     if ! dpkg-query -l $package > /dev/null; then
         echo "Installing package $package"

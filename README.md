@@ -7,6 +7,7 @@ Sets up the following if needed:
 
 * Creates ssh key for your PI
 * Installs Vim
+* Installs matchbox-keyboard for onscreen keyboard. Useful when using touchscreen with your Pi.
 * Copies bare-bones config for Vim from vim.wikia.com
 
 ## How to run
